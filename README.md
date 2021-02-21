@@ -2,7 +2,7 @@
 
 ## 1.  [ase-visualization-of-molecules.ipynb](ase-visualization-of-molecules.ipynb)
 ---
-Package ase is prepared for 3D Visualization of Molecules. Package to do that is available on gitlab: ase.
+Package ase is prepared for 3D Visualization of Molecules. Package to do that is available on gitlab: [ase ](https://gitlab.com/ase/ase).
 
 * Library needs two tables one is where atoms have their coordinates x,y,z and another coresponding with keys=symbols.
 * It could be just four columns in table csv, or pandas with columns x,y,x, symbol.
