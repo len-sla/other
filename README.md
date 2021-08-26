@@ -54,7 +54,12 @@ executing is simple:   $ _python max_size_occup.py_
 [CRONTAB](https://linuxhandbook.com/crontab/) so cleanup will be done periodically as defined by user 
 #
 
+## 5.  [olx-table.ipynb ](olx-table.ipynb)
 
+
+Task here was 
+*   to scrap the webpage  where main structure was based on the table structure.
+Information after cleaning with some simple REGEX was saved  as pandas databse for later comparison and use.
 
 ## Technologies
 
