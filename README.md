@@ -65,6 +65,22 @@ Information after cleaning with some simple REGEX was saved  as pandas databse f
 
 It is nicely described how to prepare own conrtainer with jupyter keras pandas and tensorflow 
 to be able check own ideas
+
+This is fully ready Docker container with:
+
+    NumPy
+    Pandas
+    Sklearn
+    Matplotlib
+    Seaborn
+    pyyaml
+    h5py
+    Jupyter
+    Tensorflow
+    Keras
+    OpenCV 3
+
+
 https://github.com/andreivmaksimov/python_data_science
 
 ## Technologies
