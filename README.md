@@ -61,6 +61,12 @@ Task here was
 *   to scrap the webpage  where main structure was based on the table structure.
 Information after cleaning with some simple REGEX was saved  as pandas databse for later comparison and use.
 
+## 6.  [readme-science_docker](readme-science_docker)
+
+It is nicely described how to prepare own conrtainer with jupyter keras pandas and tensorflow 
+to be able check own ideas
+https://github.com/andreivmaksimov/python_data_science
+
 ## Technologies
 
 _Created by:_ [@len-sla]
