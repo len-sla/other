@@ -100,8 +100,11 @@ do standart update
 ```
 apt-get update 
 ```
+and 
 
-
+```
+apt install ffmpeg
+```
 ## Technologies
 
 _Created by:_ [@len-sla]
