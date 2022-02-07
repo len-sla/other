@@ -65,7 +65,11 @@ Information after cleaning with some simple REGEX was saved  as pandas databse f
 To extend cpabilities of docker container is sometimes required update some internal packages or install something neww.
 That was the case this time. There was need to add ffmpeg inside as getting information about the media files through ffprobe 
 was not easy.
-Steps e
+First it is good to know what type of os is inside docker container:
+
+'''
+# cat /etc/os-release
+'''
 
 
 ## Technologies
