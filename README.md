@@ -74,7 +74,7 @@ cat /etc/os-release
 
 and it gives answer like :
 
-# cat /etc/os-release
+```
 NAME="Ubuntu"
 VERSION="20.04 LTS (Focal Fossa)"
 ID=ubuntu
@@ -87,6 +87,9 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 VERSION_CODENAME=focal
 UBUNTU_CODENAME=focal
+```
+
+
 
 then cchecking what kind of pip packages are installed
 
