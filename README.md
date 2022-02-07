@@ -61,6 +61,9 @@ Task here was
 *   to scrap the webpage  where main structure was based on the table structure.
 Information after cleaning with some simple REGEX was saved  as pandas databse for later comparison and use.
 
+## 5.  [data science  with docker](aa.jpg)
+To extend cpabilities of docker container is sometimes required update some internal packages or install something neww.
+That was the case this time.
 
 
 ## Technologies
