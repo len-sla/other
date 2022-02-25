@@ -106,10 +106,10 @@ and
 apt install ffmpeg
 ```
 
-Another interesting sub
+
 
 
 ## Technologies
 
-_Created by:_ [@len-sla]
+_Created by:_ [lencz.sla@gmail.com]
 
