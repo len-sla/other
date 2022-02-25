@@ -91,7 +91,7 @@ UBUNTU_CODENAME=focal
 
 
 
-then cchecking what kind of pip packages are installed
+then checking what kind of pip packages are installed
 
 ```
 pip list 
@@ -105,6 +105,10 @@ and
 ```
 apt install ffmpeg
 ```
+
+Another interesting sub
+
+
 ## Technologies
 
 _Created by:_ [@len-sla]
