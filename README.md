@@ -107,10 +107,23 @@ apt install ffmpeg
 ```
 ## 6.  Scrap couple of mp3 from the webpage for the ML JINA purpose
 
-To tets some multimodal capabilities of JINA framework there was need to find some mp3 files with sound.
-To scrap free of charge sounds of birds urllib request library was used and the piece of code like below
+To test some multimodal capabilities of JINA framework there was need to find example mp3 files in this case birds voices.
+To scrap free of charge sounds of birds urllib request, BeautifulSoup library was used and the piece of code like below
 
 ```
+import requests
+import urllib.request
+import re
+from bs4 import BeautifulSoup
+
+r = requests.get('https://quicksounds.com/library/sounds/animal')
+soup = BeautifulSoup(r.content, 'html.parser')
+
+for a in soup.find_all('a', href=re.compile(r'http.*\.mp3')):
+    filename = a['href'][a['href'].rfind("/")+1:]
+    doc = requests.get(a['href'])
+    with open(filename, 'wb') as f:
+        f.write(doc.content)
 
 ```
 
