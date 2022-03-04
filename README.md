@@ -105,8 +105,14 @@ and
 ```
 apt install ffmpeg
 ```
+## 6.  Scrap couple of mp3 from the webpage for the ML JINA purpose
 
+To tets some multimodal capabilities of JINA framework there was need to find some mp3 files with sound.
+To scrap free of charge sounds of birds urllib request library was used and the piece of code like below
 
+```
+
+```
 
 
 ## Technologies
