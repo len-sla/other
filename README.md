@@ -129,15 +129,22 @@ for a in soup.find_all('a', href=re.compile(r'http.*\.mp3')):
 ## 7.  Scrap couple of pictures from the webpage for the ML JINA purpose
 
 first if its static webpage:
-grab-images-from-page.py(grab-images-from-page.py)
+[grab-images-from-page.py](grab-images-from-page.py)
 
-```
 
-```
 
 ---
 
 why not saving some bing search
+```
+pip install bing-image-downloader
+```
+and 
+```
+from bing_image_downloader import downloader
+query_string='axel springer verlag news pictures'
+downloader.download(query_string, limit=100, output_dir='dataset', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
+```
 
 ## Technologies
 
