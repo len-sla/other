@@ -145,6 +145,25 @@ from bing_image_downloader import downloader
 query_string='axel springer verlag news pictures'
 downloader.download(query_string, limit=100, output_dir='dataset', adult_filter_off=True, force_replace=False, timeout=60, verbose=True)
 ```
+## 8.  converting outlook pst files to MBOX format
+
+there are plent y of converters of course paid software which is obvious though <b>
+ once you want to spend some 5 minutes more and install one more library on your ubuntu or other linux machine
+ everything could be done eqally good.
+ I am saying here about pst-utils:
+ 
+ ```
+ sudo apt install pst-utils
+
+
+ ```
+ Then you need to find where on your outlook subdirectories pst files are stored or just export them from the menu
+ and convert with:
+ 
+[grab-images-from-page.py](grab-images-from-page.py)
+
+
+
 
 ## Technologies
 
