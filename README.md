@@ -154,13 +154,19 @@ there are plent y of converters of course paid software which is obvious though 
  
  ```
  sudo apt install pst-utils
-
-
  ```
  Then you need to find where on your outlook subdirectories pst files are stored or just export them from the menu
  and convert with:
  
-[grab-images-from-page.py](grab-images-from-page.py)
+ ```
+readpst -ur Outlook.pst
+ ```
+ there are extra options like output directory etc according to your needs . 
+ After couple of minutes ~1GB depends on the size you have directories with subdirectories and MBOX files ready to use <b>
+ Those could be imported to MBOX based mail clients.
+ 
+ 
+
 
 
 
