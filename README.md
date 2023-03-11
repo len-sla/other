@@ -165,9 +165,82 @@ readpst -ur Outlook.pst
  After couple of minutes ~1GB depends on the size you have directories with subdirectories and MBOX files ready to use <b>
  Those could be imported to MBOX based mail clients.
  
- 
+ ## G.  Gradio
+
+<p>After a bit more than two years GPT3 is alife and kicking </p>if you want to play with openAI API used for the Chatboot with the help of gradio package</p> below is the
+
+[notebook](GPT-3-gradio-RevA.ipynb)
+
+All this is sugessted by OpenAI itself
+
+---
+
+<style>
+    .container {
+        width: 800px;
+        text-align: justify;
+    }
+</style>
+
+<div class="container">
+
+Gradio can be used to create a user interface for OpenChat, which is an open-source chatbot framework. To connect Gradio to OpenChat, you can follow these general steps:
+* First, create a chatbot using OpenChat, following the documentation and tutorials available on its official website or GitHub repository.
+
+* Once you have a functional chatbot, you can use Gradio to create a user interface for it. Gradio allows you to create simple web-based UIs for your machine learning models, including chatbots.
+
+* To create a Gradio interface for your chatbot, you can define a Python function that takes user input as an argument and returns the chatbot response. This function should use the OpenChat API to process the user input and generate the chatbot response.
+
+* Once you have defined the function, you can use Gradio's Interface class to create a UI for it. You can define the UI components, such as text input fields and buttons, and connect them to your chatbot function.
+
+* Finally, you can launch the Gradio interface using the launch method, which will start a web server and open the UI in your web browser.
 
 
+</div>
+
+Here is some sample code that demonstrates how to connect Gradio to OpenChat:
+
+```
+
+import openchat
+import gradio as gr
+
+# Create an OpenChat chatbot
+chatbot = openchat.Chatbot()
+
+# Define a function that takes user input and returns the chatbot response
+def chatbot_response(text):
+    response = chatbot.get_response(text)
+    return str(response)
+
+# Define the Gradio interface components
+inputs = gr.inputs.Textbox(label="Enter text")
+outputs = gr.outputs.Textbox(label="Chatbot response")
+
+# Define the Gradio interface
+interface = gr.Interface(chatbot_response, inputs, outputs, title="OpenChat Bot")
+
+# Launch the Gradio interface
+interface.launch()
+
+```
+
+
+<style>
+    .container {
+        width: 800px;
+        text-align: justify;
+    }
+</style>
+
+
+<div class="container">
+    <p>This code defines a chatbot_response function that takes user input as an argument, uses the OpenChat API to process the input, and returns the chatbot response. It then defines a Gradio interface that includes a text input field and a text output field, which are connected to the chatbot_response function. Finally, it launches the Gradio interface</p>
+</div>
+
+
+
+---
 
 
 
