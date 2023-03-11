@@ -169,7 +169,7 @@ readpst -ur Outlook.pst
 
 <p>After a bit more than two years GPT3 is alife and kicking </p>if you want to play with openAI API used for the Chatboot with the help of gradio package</p> below is the
 
-[notebook](GPT-3-gradio-RevA.ipynb)
+[notebook](https://github.com/len-sla/GPT_finetuned_with_own_text/blob/main/GPT-3-gradio-RevA.ipynb)
 
 All this is sugessted by OpenAI itself
 
