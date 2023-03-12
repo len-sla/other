@@ -184,11 +184,10 @@ All this is sugessted by OpenAI itself
 
 <div class="container">
 
-Gradio can be used to create a user interface for OpenChat, which is an open-source chatbot framework. To connect Gradio to OpenChat, you can follow these general steps:
+Gradio can be used to create a user interface for OpenChat, which is an open-source chatbot framework. To connect Gradio to OpenChat, you should follow these general steps:
 * First, create a chatbot using OpenChat, following the documentation and tutorials available on its official website or GitHub repository.
 
-* Once you have a functional chatbot, you can use Gradio to create a user interface for it. Gradio allows you to create simple web-based UIs for your machine learning models, including chatbots.
-
+* Once you have a functional chatbot, you can use Gradio to create a user interface for it.
 * To create a Gradio interface for your chatbot, you can define a Python function that takes user input as an argument and returns the chatbot response. This function should use the OpenChat API to process the user input and generate the chatbot response.
 
 * Once you have defined the function, you can use Gradio's Interface class to create a UI for it. You can define the UI components, such as text input fields and buttons, and connect them to your chatbot function.
@@ -235,7 +234,7 @@ interface.launch()
 
 
 <div class="container">
-    <p>This code defines a chatbot_response function that takes user input as an argument, uses the OpenChat API to process the input, and returns the chatbot response. It then defines a Gradio interface that includes a text input field and a text output field, which are connected to the chatbot_response function. Finally, it launches the Gradio interface</p>
+    <p>This code above defines a chatbot_response function that takes user input as an argument, uses the OpenChat API to process the input, and returns the chatbot response. It then defines a Gradio interface that includes a text input field and a text output field, which are connected to the chatbot_response function. Finally, it launches the Gradio interface</p>
 </div>
 
 
