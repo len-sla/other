@@ -272,7 +272,8 @@ Based on this image ~ 500MB was build
  
  with nice result 
  
- [yew](https://github.com/len-sla/other/blob/main/yewtube.png)
+
+ ![Yew](https://github.com/len-sla/other/blob/main/yewtube.png)
  To further convert videos to mp4 amd mp3 format bash script was used from host to be able modify contents etc
  Script should be used when yewtube container is running simply execute it on parallel terminal 
  
