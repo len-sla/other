@@ -231,7 +231,8 @@ This code above defines a chatbot_response function that takes user input as an 
 
  
  
- ## 9.  Yewtube in docker
+ ## 10.  Yewtube in docker
+ https://pypi.org/project/yewtube/
  
  To avoid contaminate ubuntu environment I prepared docker image for yewtube.
   Just to have access to similarly like pictures text based interface for searching youtube service.
@@ -270,6 +271,8 @@ Based on this image ~ 500MB was build
 ```
  
  with nice result 
+ 
+ ![yewtube ](rotating.gif)
  
  To further convert videos to mp4 amd mp3 format bash script was used from host to be able modify contents etc
  Script should be used when yewtube container is running simply execute it on parallel terminal 
