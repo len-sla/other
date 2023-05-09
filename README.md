@@ -236,8 +236,80 @@ interface.launch()
 <div class="container">
     <p>This code above defines a chatbot_response function that takes user input as an argument, uses the OpenChat API to process the input, and returns the chatbot response. It then defines a Gradio interface that includes a text input field and a text output field, which are connected to the chatbot_response function. Finally, it launches the Gradio interface</p>
 </div>
+ ## 9.  yewtube in docker
+ 
+ To avoid contaminate ubuntu environment I prepared docker image for yewtube.
+  Just to have access to similarly like pictures text based interface for searching youtube service.
+ 
+ Dockerfile is as follows:
+ ```
+ # Use a lightweight Python image
+FROM python:3.9-slim-buster
+
+# Install FFmpeg
+RUN apt-get update && apt-get install -y ffmpeg
+
+# Install pip, setuptools, and wheel
+RUN python3 -m pip install -U pip setuptools wheel
+
+# Install yt-dlp
+RUN python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install the yewtube package
+RUN pip install yewtube
+
+# Run the command to start the terminal in interactive mode
+CMD ["bash"]
+ 
+ ```
+Based on this image ~ 500MB was build
+ 
+ ```
+ docker build -t myimage .
+```
+ 
+ with nice result 
+ 
+ To further convert videos to mp4 amd mp3 format bash script was used from host to be able modify contents etc
+ Script should be used when yewtube container is running simply execute it on parallel terminal 
+ 
+ ```
+ docker run -it --rm -v $(pwd)/mps:/root/mps --name=yewtube yewtube
+ ```
+ ```
+ #!/bin/bash
+
+# Check if the /root/mps directory exists in the container
+if ! docker exec yewtube [ -d /root/mps ]; then
+  echo "The /root/mps directory does not exist in the container"
+  exit 1
+fi
+
+# Loop through all WebM files in the /root/mps directory and convert them to MP4 and MP3
+docker exec yewtube find /root/mps -type f -name "*.webm" | while read file; do
+  # Get the filename without the extension
+  filename=$(basename -- "$file")
+  extension="${filename##*.}"
+  filename="${filename%.*}"
+
+  # Convert the WebM file to MP4 using ffmpeg
+  # docker exec yewtube ffmpeg -i "$file" -c:v libx264 -preset slow -crf 22 -c:a copy "/root/mps/${filename//[^[:alnum:]]/_}.mp4" # first version generating 0 bytes
+  docker exec yewtube ffmpeg -i "$file" -c:v libx265 -crf 28 -c:a aac -b:a 128k "/root/mps/${filename//[^[:alnum:]]/_}.mp4"
 
 
+  # Extract the audio stream as an MP3 file using ffmpeg
+  docker exec yewtube ffmpeg -i "$file" -vn -c:a libmp3lame -q:a 2 "/root/mps/${filename//[^[:alnum:]]/_}.mp3"
+
+  # Remove the original WebM file
+  docker exec yewtube rm "$file"
+done
+ ```
 
 ---
 
