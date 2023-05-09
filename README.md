@@ -225,19 +225,13 @@ interface.launch()
 ```
 
 
-<style>
-    .container {
-        width: 800px;
-        text-align: justify;
-    }
-</style>
 
 
 This code above defines a chatbot_response function that takes user input as an argument, uses the OpenChat API to process the input, and returns the chatbot response. It then defines a Gradio interface that includes a text input field and a text output field, which are connected to the chatbot_response function. Finally, it launches the Gradio interface</p>
 
  
  
- ## 9.  yewtube in docker
+ ## 9.  Yewtube in docker
  
  To avoid contaminate ubuntu environment I prepared docker image for yewtube.
   Just to have access to similarly like pictures text based interface for searching youtube service.
